@@ -4,22 +4,25 @@ const config: Config = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}'
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
       colors: {
         background: 'var(--background)',
-        foreground: 'var(--foreground)'
+        foreground: 'var(--foreground)',
       },
       // container
       container: {
         center: true,
-        padding: '1.5rem'
+        padding: '1.5rem',
       },
-      transitionDuration: 300
-    }
+      // transition duration
+      transitionDuration: {
+        DEFAULT: '0.3s',
+      },
+    },
   },
-  plugins: []
+  plugins: [],
 };
 export default config;
