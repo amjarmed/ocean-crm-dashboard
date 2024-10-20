@@ -5,7 +5,7 @@ import MobileNav from './mobile-nav';
 function Navbar() {
   return (
     <header className='fixed top-0 left-0 w-full bg-slate-900/50 backdrop-blur-md z-30 p-5'>
-      <div className='container relative flex  justify-between transition-all py-6'>
+      <div className='container relative flex  justify-between transition-all'>
         {/* logo */}
         <Logo />
         {/* desktop navigation  */}
