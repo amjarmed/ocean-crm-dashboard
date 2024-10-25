@@ -2,18 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-section {
-  padding: 3rem 0;
-}
-@media (min-width: 648px) {
-  section {
-    padding: 4rem 0;
-  }
-}
-@media (min-width: 768px) {
-  section {
-    padding: 5rem 0;
-  }
+.custom-section {
+  @apply py-12  md:py-16 lg:py-20;
 }
 
 .btn {
