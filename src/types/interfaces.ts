@@ -43,7 +43,13 @@ export interface Testimonial {
 }
 
 // social media
-export type icons = 'instagram' | 'facebook' | 'twitter' | 'linkedin';
+export type icons =
+  | 'instagram'
+  | 'facebook'
+  | 'twitter'
+  | 'linkedin'
+  | 'github'
+  | 'youtube';
 export interface SocialMedia {
   name: string;
   icon: icons;
