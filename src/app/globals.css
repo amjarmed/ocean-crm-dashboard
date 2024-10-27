@@ -25,3 +25,7 @@
 .bubble-effect {
   @apply absolute -z-10 rounded-full blur-3xl opacity-20;
 }
+
+.social-links {
+  @apply w-4 md:w-5 lg:w-6 h-4 md:h-5 lg:h-6 hover:text-sky-600 hover:translate-y-1 transition-all;
+}

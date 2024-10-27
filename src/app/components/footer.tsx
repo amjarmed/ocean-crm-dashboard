@@ -1,12 +1,33 @@
 import { footerLinksData } from '@/constants/footer-links';
-import { socialMedia } from '@/constants/social-media';
-import { toPascalCase } from '@/lib/utils';
+import { Facebook, Github, Instagram, Twitter, Youtube } from 'lucide-react';
 import Link from 'next/link';
+import { ReactNode } from 'react';
 import FooterLinksCard from './footer-links-card';
-import MyIcon from './icon';
 import Logo from './logo';
 
 const Footer = () => {
+  const socialIcons: ReactNode[] = [
+    <Facebook
+      className='social-links'
+      key='f'
+    />,
+    <Instagram
+      className='social-links'
+      key='i'
+    />,
+    <Twitter
+      className='social-links'
+      key='t'
+    />,
+    <Github
+      className='social-links'
+      key='t'
+    />,
+    <Youtube
+      className='social-links'
+      key='t'
+    />,
+  ];
   return (
     <footer className='custom-section'>
       <div className='container '>
@@ -15,24 +36,19 @@ const Footer = () => {
           {/* logo and social media*/}
           <div className='social-media  w-full md:basis-2/5  flex flex-col  items-start  pag-8 space-y-4 '>
             <Logo />
-            <p>
+            <p className='text-lg'>
               Making the world a better place through constructing elegant
               hierarchies.
             </p>
             <ul className='flex justify-center items-center space-x-4 px-4 py-6 gap-4'>
-              {socialMedia.map((media, index) => (
+              {socialIcons.map((icon, index) => (
                 <li key={index}>
                   <Link
-                    href={media.url}
+                    href='#'
                     target='_blank'
                     rel='noopener noreferrer'
                   >
-                    <MyIcon
-                      iconName={toPascalCase(media.icon)}
-                      size={24}
-                      color='currentColor'
-                      className='hover:text-sky-800'
-                    />
+                    {icon}
                   </Link>
                 </li>
               ))}
